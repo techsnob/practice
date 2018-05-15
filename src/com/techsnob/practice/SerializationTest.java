@@ -12,7 +12,7 @@ public class SerializationTest {
         employee.setName("Ashintha");
         employee.setSalary(30L);
         employee.setId(1);
-        FileOutputStream fout = new FileOutputStream("C:\\Users\\techsnob\\Desktop\\employee.data");
+        FileOutputStream fout = new FileOutputStream("C:\\Users\\nari\\Desktop\\employee.data");
         ObjectOutputStream oos = new ObjectOutputStream(fout);
         oos.writeObject(employee);
         oos.close();
@@ -22,7 +22,7 @@ public class SerializationTest {
 	//Read written emp obj back to java
 	public static void main(String[] args) throws ClassNotFoundException, IOException {
         Employee employee = new Employee();
-        FileInputStream fin = new FileInputStream("C:\\Users\\techsnob\\Desktop\\employee.data");
+        FileInputStream fin = new FileInputStream("C:\\Users\\nari\\Desktop\\employee.data");
         ObjectInputStream ois = new ObjectInputStream(fin);
         employee = (Employee) ois.readObject();
         ois.close();
